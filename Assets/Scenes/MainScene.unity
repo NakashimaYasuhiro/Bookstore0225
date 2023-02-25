@@ -672,7 +672,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844205931}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.26, z: 0}
+  m_LocalPosition: {x: 5.47, y: 1.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -692,3 +692,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c14b1755ad70e48469e9287af2ec1533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_inputMover:
+    m_Name: Input Mover
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f9925712-62b7-4170-ba25-3b4d5bd90da3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: 071dc1d9-3393-4332-9f5f-293fea29b8dd
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Mover
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 008e2312-2da5-4da2-8f64-efbfa5893c79
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Mover
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 86531075-3671-4030-b533-1caf0b2cad78
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Mover
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 57846207-67ea-43ae-b564-b5f1a509c367
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Mover
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 02630dca-f32a-44a8-a741-b093fc1d4e18
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Mover
+      m_Flags: 8
+    m_Flags: 0
+  m_movementValue: {x: 0, y: 0}
+  m_fSpeed: 0.01
