@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 844205934}
   - component: {fileID: 844205933}
   - component: {fileID: 844205932}
-  - component: {fileID: 844205936}
+  - component: {fileID: 844205937}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -680,7 +680,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &844205936
+--- !u!114 &844205937
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -689,6 +689,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 844205931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b91686013ef58f4daba1bfcb8c08460, type: 3}
+  m_Script: {fileID: 11500000, guid: c14b1755ad70e48469e9287af2ec1533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
