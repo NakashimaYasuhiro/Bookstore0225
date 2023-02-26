@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
+  - component: {fileID: 330585548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -338,6 +339,69 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &330585548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f47d1d5b5f1cc449540834fd301eed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputRotation:
+    m_Name: Input Rotation
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 45c91240-158b-4dfc-a886-302d7e6b2982
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: 88bcc861-79a7-45ba-86a3-8a676147a3f0
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rotation
+      m_Flags: 4
+    - m_Name: up
+      m_Id: fcfa5f64-6784-49ce-a80d-9ca4abed65d6
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rotation
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 66b879cb-7606-4778-a027-9c00e9b01579
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rotation
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 1469967e-c3fe-4c24-a925-9161a2822590
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rotation
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 04e5c64c-77ad-4e10-8255-3bd7e2bc1517
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rotation
+      m_Flags: 8
+    m_Flags: 0
+  m_rotationValue: {x: 0, y: 0}
+  m_fSpeed: 0.1
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +657,7 @@ GameObject:
   - component: {fileID: 844205933}
   - component: {fileID: 844205932}
   - component: {fileID: 844205937}
+  - component: {fileID: 844205938}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -672,7 +737,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844205931}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.47, y: 1.26, z: 0}
+  m_LocalPosition: {x: 7.7, y: 1.26, z: 5.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -743,3 +808,66 @@ MonoBehaviour:
     m_Flags: 0
   m_movementValue: {x: 0, y: 0}
   m_fSpeed: 0.01
+--- !u!114 &844205938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844205931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411237e2d57be9443b518466cd1906b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputRotationH:
+    m_Name: Input Rotation H
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 441964c0-c1cc-4fa5-94e5-62db09248304
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: 236a659a-a391-4274-ade5-dc19b27fca76
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rotation H
+      m_Flags: 4
+    - m_Name: up
+      m_Id: df7be63c-63d3-4ba0-9003-1cedb32c3bb7
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rotation H
+      m_Flags: 8
+    - m_Name: down
+      m_Id: efeb1a3f-c2fc-4f66-8ef1-5fd1e9567f6d
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rotation H
+      m_Flags: 8
+    - m_Name: left
+      m_Id: f9e7ee30-263b-4237-ae05-22ec4be6326e
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rotation H
+      m_Flags: 8
+    - m_Name: right
+      m_Id: b951aaab-d4bc-4fd0-a56a-fbc1bf23cc5f
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input Rotation H
+      m_Flags: 8
+    m_Flags: 0
+  rotationHValue: {x: 0, y: 0}
+  m_fSpeed: 0.05
