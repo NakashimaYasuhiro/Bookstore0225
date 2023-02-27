@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerRotationH : MonoBehaviour
+public class playerRotationH : MonoBehaviour
 {
     public InputAction inputRotationH;
     public Vector2 rotationHValue;
