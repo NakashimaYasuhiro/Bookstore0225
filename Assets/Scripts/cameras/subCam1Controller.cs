@@ -1,26 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class subCam1Controller : MonoBehaviour
 {
+    public GameObject maincam;
+    public GameObject subcam1;
 
 
-    
-    
-
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
+        if(subcam1.activeSelf)   
+        {
 
-    }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                 Debug.Log("spacekey was pushed");
+            
 
-    //Debug.Log("inputClickAnywhere worked");
+                 Debug.Log(maincam.activeSelf);
+           
+                //maincam.SetActive(true);
+                // subcam1.SetActive(false);
+                // Debug.Log(maincam.activeSelf);
+             
+             }
+
+            /*
+             if(Input.GetMouseButtonDown(0))
+             {
+                  Debug.Log("ClickAndChangeCamera worked");
+
+                  subcam1.SetActive(false);
+                  maincam.SetActive(true);   
+             } 
+             */
+        }    
+        
+            
+    } 
+
 }
+    
+
+    
+

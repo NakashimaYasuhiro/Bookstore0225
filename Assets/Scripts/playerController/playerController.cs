@@ -23,7 +23,7 @@ public class playerController : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Hi");
+       
     }
 
     void Update()

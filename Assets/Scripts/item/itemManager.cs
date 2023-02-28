@@ -21,7 +21,7 @@ public class itemManager : MonoBehaviour
 
         //2次元配列？とかいうのにすれば、サイズ情報と紹介文情報を格納できる？
 
-        Debug.Log(bookList[9]);
+        //Debug.Log(bookList[9]);
     }
 
     // Update is called once per frame
