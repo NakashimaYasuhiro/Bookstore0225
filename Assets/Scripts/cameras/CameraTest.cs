@@ -99,6 +99,8 @@ public class CameraTest : MonoBehaviour
               maincamStage = false;
               subcam1Stage = false;
               subcam2Stage = true;
+
+              
     }       
 
 

@@ -9,7 +9,8 @@ public class ZoomClickedBook : MonoBehaviour
     public GameObject maincam, subcam1, subcam2;
     Vector3 subcam2posi;
 
-    public CameraTest cameraTest; 
+    public CameraTest cameraTest;
+    public ClickURL clickurl;
 
     void Start()
     {
@@ -33,6 +34,7 @@ public class ZoomClickedBook : MonoBehaviour
                 //
                 //Maincam.GetComponent<Camera>().enabled = true;
                 cameraTest.MaincamStageF();
+                clickurl.ClickBookURL();
                 Debug.Log("cameraTest.maincamStage:"+cameraTest.maincamStage);
             }
             else if (cameraTest.maincamStage)
