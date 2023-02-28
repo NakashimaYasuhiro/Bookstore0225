@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class subCam1Controller : MonoBehaviour
+public class SubCam1Controller : MonoBehaviour
 {
     public GameObject maincam;
     public GameObject subcam1;

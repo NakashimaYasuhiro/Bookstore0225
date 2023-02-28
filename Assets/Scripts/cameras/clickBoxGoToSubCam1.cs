@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class clickBoxGoToSubCam1 : MonoBehaviour
+public class ClickBoxGoToSubCam1 : MonoBehaviour
 {
 
     public GameObject maincam;
@@ -10,7 +10,7 @@ public class clickBoxGoToSubCam1 : MonoBehaviour
     public GameObject subcam2;
 
     //call function from other class
-    public cameraTest cameratest;
+    public CameraTest cameraTest;
 
     void Start()
     {
@@ -31,7 +31,7 @@ public class clickBoxGoToSubCam1 : MonoBehaviour
     public void ChangeToSubCam1()
     {
         Debug.Log("ChangeToSubCam1 function");
-        cameratest.Subcam1StageF();
+        cameraTest.Subcam1StageF();
 
         /*
          if (maincam.activeSelf)

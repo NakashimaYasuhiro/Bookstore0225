@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cameraTest : MonoBehaviour
+public class CameraTest : MonoBehaviour
 
 
 {
     public GameObject maincam;
     public GameObject subcam1;
     public GameObject subcam2;
-    private bool maincamStage = true;
-    private bool subcam1Stage = false;
-    private bool subcam2Stage = false;
+    public bool maincamStage = true;
+    public bool subcam1Stage = false;
+    public bool subcam2Stage = false;
     
     void Start()
     {
@@ -53,7 +53,16 @@ public class cameraTest : MonoBehaviour
             }
 
         }
-       
+        else if (subcam2Stage)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+
+                MaincamStageF();
+            }
+
+        }
+
 
     }
 
