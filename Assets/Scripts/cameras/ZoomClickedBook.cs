@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Windows.WebCam;
+
 
 public class ZoomClickedBook : MonoBehaviour
 {
@@ -10,7 +10,7 @@ public class ZoomClickedBook : MonoBehaviour
     Vector3 subcam2posi;
 
     public CameraTest cameraTest;
-    public ClickURL clickurl;
+   // public ClickURL clickurl;
 
     void Start()
     {
@@ -34,7 +34,7 @@ public class ZoomClickedBook : MonoBehaviour
                 //
                 //Maincam.GetComponent<Camera>().enabled = true;
                 cameraTest.MaincamStageF();
-                clickurl.ClickBookURL();
+               // clickurl.ClickBookURL();
                 Debug.Log("cameraTest.maincamStage:"+cameraTest.maincamStage);
             }
             else if (cameraTest.maincamStage)
