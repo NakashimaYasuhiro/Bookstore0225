@@ -9,17 +9,21 @@ public class ZoomClickedBook : MonoBehaviour
     public GameObject maincam, subcam1, subcam2;
     Vector3 subcam2posi;
 
-    public CameraTest cameraTest;
-   // public ClickURL clickurl;
+    public CameraStatus camerastatus;
+    // public ClickURL clickurl;
+
+    [SerializeField] GameObject panel;
+    public GameObject cloneObject;
+    public Transform objParent;
+    public Vector3 scale;
+
+    public CloseCanvas closecanvas;
+    
 
     void Start()
     {
         subcam2posi = subcam2.transform.position;
-        Debug.Log(subcam2posi);
-
-        //Debug.Log("maincamStage=" + cameraTest.maincamStage);
-        //Debug.Log("subcam1Stage=" + cameraTest.subcam1Stage);
-        //Debug.Log("subcam2Stage=" + cameraTest.subcam2Stage);
+       
 
     }
 
@@ -28,16 +32,14 @@ public class ZoomClickedBook : MonoBehaviour
     {        
         if (Input.GetMouseButtonDown(0))
         {
-            if (cameraTest.subcam2Stage)
+            if (camerastatus.subcam2Stage)
             {
-                Debug.Log("subcam2Stage = true");
-                //
-                //Maincam.GetComponent<Camera>().enabled = true;
-                cameraTest.MaincamStageF();
-               // clickurl.ClickBookURL();
-                Debug.Log("cameraTest.maincamStage:"+cameraTest.maincamStage);
+                closecanvas.ClosePanel();
+                
+                camerastatus.MaincamStageF();
+                Debug.Log("CameraStatus.maincamStage:"+camerastatus.maincamStage);
             }
-            else if (cameraTest.maincamStage)
+            else if (camerastatus.maincamStage)
             {
                 clickedbook = null;
                 Debug.Log("maincamstage in else if");
@@ -50,28 +52,26 @@ public class ZoomClickedBook : MonoBehaviour
 
                     clickedbook = hit.collider.gameObject;
 
-                    //Debug.Log("クリックしたオブジェクトのタグは"+clickedbook.tag);
-
-                    //Debug.Log(clickedbook);
 
                     if (clickedbook.tag == "book") {
                         Vector3 transformposi = clickedbook.GetComponent<Transform>().position;
 
-                        subcam2.transform.position = new Vector3(transformposi.x, transformposi.y, transformposi.z - 1f);
-                        cameraTest.Subcam2StageF();
-
-                        //subcam2.SetActive(true);
-                        //cameraTest.maincam.GetComponent<Camera>().enabled = false;
-
-
-                        clickedbook = null;
+                        
+                        ShowPanel();
+                        if (cloneObject != null)
+                        {
+                            Debug.Log(cloneObject);
+                        }
+                        else { Debug.Log("cloneobject null"); }
+                         
+                                              
 
                     }
-                    
+
                 }
 
             }
-            else if (cameraTest.subcam1Stage)
+            else if (camerastatus.subcam1Stage)
             {
                 clickedbook = null;
                 Debug.Log("subcam1stage in else if");
@@ -84,22 +84,19 @@ public class ZoomClickedBook : MonoBehaviour
 
                     clickedbook = hit.collider.gameObject;
 
-                    //Debug.Log("クリックしたオブジェクトのタグは"+clickedbook.tag);
-
-                    //Debug.Log(clickedbook);
+                    
 
                     if (clickedbook.tag == "book")
-                    {
-                        Vector3 transformposi = clickedbook.GetComponent<Transform>().position;
+                    {                        
+                        ShowPanel();
 
-                        subcam2.transform.position = new Vector3(transformposi.x, transformposi.y, transformposi.z - 1f);
-                        cameraTest.Subcam2StageF();
-
-                        //subcam2.SetActive(true);
-                        //cameraTest.maincam.GetComponent<Camera>().enabled = false;
-
-
-                        clickedbook = null;
+                        if (cloneObject != null)
+                        {
+                            Debug.Log(cloneObject);
+                        }
+                        else { Debug.Log("cloneobject null"); }
+                       
+                       
 
                     }
 
@@ -110,4 +107,22 @@ public class ZoomClickedBook : MonoBehaviour
 
         }
     }
+
+    public void ShowPanel()
+    {
+        panel.SetActive(true);
+        camerastatus.Subcam2StageF();
+        cloneObject = Instantiate(clickedbook, objParent);        
+    
+                   
+        cloneObject.transform.localScale = new Vector3(500, 700, 1);
+        cloneObject.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+       
+   
+    }
+
+
+
+
+
 }

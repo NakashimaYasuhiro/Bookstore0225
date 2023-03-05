@@ -10,7 +10,7 @@ public class ClickBoxGoToSubCam1 : MonoBehaviour
     public GameObject subcam2;
 
     //call function from other class
-    public CameraTest cameraTest;
+    public CameraStatus camerastatus;
 
     void Start()
     {
@@ -31,7 +31,7 @@ public class ClickBoxGoToSubCam1 : MonoBehaviour
     public void ChangeToSubCam1()
     {
         Debug.Log("ChangeToSubCam1 function");
-        cameraTest.Subcam1StageF();
+        camerastatus.Subcam1StageF();
 
         /*
          if (maincam.activeSelf)
