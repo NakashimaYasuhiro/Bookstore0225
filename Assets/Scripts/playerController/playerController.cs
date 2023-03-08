@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject firstpanel;
     public InputAction m_inputMover;
     public Vector2 m_movementValue;
-    public float m_fSpeed = 0.01f;
+    public float m_fSpeed = 0.2f;
 
 
     void Start()
@@ -25,9 +25,9 @@ public class PlayerController : MonoBehaviour
         m_movementValue = m_inputMover.ReadValue<Vector2>();
 
         transform.Translate(
-            m_movementValue.x * m_fSpeed,
+            m_movementValue.x * m_fSpeed * Time.deltaTime,
             0.0f,
-            m_movementValue.y * m_fSpeed
+            m_movementValue.y * m_fSpeed * Time.deltaTime
         );   
     }
 
