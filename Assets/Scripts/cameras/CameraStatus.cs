@@ -18,9 +18,9 @@ public class CameraStatus : MonoBehaviour
         subcam1.SetActive(false);
         subcam2.SetActive(false);
 
-        Debug.Log("maincam.activeSelf" + maincam.activeSelf);
-        Debug.Log("subcam1.activeSelf" + subcam1.activeSelf);
-        Debug.Log("subcam2.activeSelf" + subcam2.activeSelf);
+       // Debug.Log("maincam.activeSelf" + maincam.activeSelf);
+        //Debug.Log("subcam1.activeSelf" + subcam1.activeSelf);
+        //Debug.Log("subcam2.activeSelf" + subcam2.activeSelf);
 
         maincamStage = true;
 

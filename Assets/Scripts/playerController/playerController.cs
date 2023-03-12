@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public Vector2 m_movementValue;
     public float m_fSpeed = 0.2f;
 
+    //Ray‚ð”ò‚Î‚·‚â‚Â
+    public Transform shotDirection;
 
     void Start()
     {
@@ -21,6 +23,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        //Debug.DrawRay(shotDirection.position, shotDirection.transform.forward, Color.green);
+        Shooting();
 
         m_movementValue = m_inputMover.ReadValue<Vector2>();
 
@@ -53,4 +57,22 @@ public class PlayerController : MonoBehaviour
     {
         m_inputMover.Disable();
     }
+    
+    public void Shooting()
+    {
+        RaycastHit hitInfo;
+        if (Physics.Raycast(shotDirection.transform.position,shotDirection.transform.forward, out hitInfo,1f))
+        {
+            if(hitInfo.collider != null) 
+            {
+               
+                Debug.Log("‰½‚©‚É“–‚½‚Á‚½");
+            }
+            else 
+            {
+                Debug.Log("“–‚½‚Á‚Ä‚È‚¢");
+            }
+        }
+    }
+
 }
