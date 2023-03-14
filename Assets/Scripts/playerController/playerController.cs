@@ -10,17 +10,27 @@ public class PlayerController : MonoBehaviour
     public InputAction m_inputMover;
     public Vector2 m_movementValue;
     public float m_fSpeed = 0.2f;
+   // Vector3 targetPos;
 
+    //Ray‚ð”ò‚Î‚·‚â‚Â
+    //public Transform shotDirection;
+
+    //[SerializeField] LayerMask solidObjectsLayer;
 
     void Start()
     {
         firstpanel.SetActive(true);
         m_movementValue = m_inputMover.ReadValue<Vector2>();
         transform.position = new Vector3(8f, 1.23f, -3.38f);
+
+       
+        
     }
 
     void Update()
     {
+        //Debug.DrawRay(shotDirection.position, shotDirection.transform.forward, Color.green);
+        
 
         m_movementValue = m_inputMover.ReadValue<Vector2>();
 
@@ -28,7 +38,9 @@ public class PlayerController : MonoBehaviour
             m_movementValue.x * m_fSpeed * Time.deltaTime,
             0.0f,
             m_movementValue.y * m_fSpeed * Time.deltaTime
-        );   
+        );
+
+        //transform.position = targetPos;
     }
 
 
@@ -53,4 +65,28 @@ public class PlayerController : MonoBehaviour
     {
         m_inputMover.Disable();
     }
+
+
+    /*
+    public bool Shooting()
+    {
+        
+        RaycastHit hitInfo;
+        if (Physics.Raycast(shotDirection.transform.position,shotDirection.transform.forward, out hitInfo,1f))
+        {
+            if(hitInfo.collider != null) 
+            {
+               
+                Debug.Log("‰½‚©‚É“–‚½‚Á‚½");
+                
+            }
+
+        }
+        
+     }*/
+
+    //bool IsWalkable(Vector3 targetPos)
+    //{
+    //    return Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer)==false;
+    //}
 }
