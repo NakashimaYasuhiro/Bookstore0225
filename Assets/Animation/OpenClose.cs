@@ -25,9 +25,9 @@ public class OpenClose : MonoBehaviour
         {
             Debug.Log("‚Ô‚Â‚©‚Á‚½‚æ");
             animator.SetTrigger("OpenTr");
-            playerObj.SetActive(false);
+            
             Invoke("PlayerToRoom", 3f);
-            playerObj.SetActive(true);
+            
 
 
         }
