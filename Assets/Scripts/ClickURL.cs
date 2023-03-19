@@ -4,8 +4,22 @@ using UnityEngine;
 
 public class ClickURL : MonoBehaviour
 {
-    public void ClickBookURL()
+    [SerializeField] ZoomClickedBook zoomClickedBook;
+    public string pickedurl;
+
+    private void Start()
     {
-        Application.OpenURL("https://www.google.co.jp/");
+        pickedurl = null;
+    }
+
+
+    public void onClick()
+    {  
+        pickedurl = zoomClickedBook.pickedItem.url;
+        
+        Debug.Log("url:"+pickedurl) ;
+
+        Application.OpenURL(pickedurl);
+       
     }
 }

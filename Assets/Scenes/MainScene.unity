@@ -3497,7 +3497,7 @@ MonoBehaviour:
   cloneObject: {fileID: 231205779}
   objParent: {fileID: 1923522551}
   scale: {x: 0, y: 0, z: 0}
-  closecanvas: {fileID: 1687383740}
+  closecanvas: {fileID: 0}
   showBookImage: {fileID: 2059917794}
   itemDatabase: {fileID: 11400000, guid: 759ad8e03519a064f9e7261688b63206, type: 2}
   pickedItem:
@@ -8362,6 +8362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f70fd8d25c3bf4ea94d37d2e80a446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoomClickedBook: {fileID: 0}
+  pickedurl: 
 --- !u!1 &563784670
 GameObject:
   m_ObjectHideFlags: 0
@@ -27411,6 +27413,8 @@ GameObject:
   - component: {fileID: 1656815440}
   - component: {fileID: 1656815439}
   - component: {fileID: 1656815438}
+  - component: {fileID: 1656815441}
+  - component: {fileID: 1656815442}
   m_Layer: 5
   m_Name: URLButton
   m_TagString: Untagged
@@ -27425,14 +27429,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656815436}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -62.401386}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 864282646}
-  m_Father: {fileID: 2059917793}
-  m_RootOrder: 0
+  m_Father: {fileID: 2059354221}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -27482,7 +27486,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1656815439}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1656815441}
+        m_TargetAssemblyTypeName: ClickURL, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1656815439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27521,6 +27537,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656815436}
   m_CullTransparentMesh: 1
+--- !u!114 &1656815441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656815436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f70fd8d25c3bf4ea94d37d2e80a446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomClickedBook: {fileID: 231205783}
+  pickedurl: 
+--- !u!114 &1656815442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656815436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
 --- !u!1001 &1663630858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28065,7 +28108,6 @@ GameObject:
   - component: {fileID: 1687383737}
   - component: {fileID: 1687383739}
   - component: {fileID: 1687383738}
-  - component: {fileID: 1687383740}
   m_Layer: 5
   m_Name: BGPanel
   m_TagString: Untagged
@@ -28132,20 +28174,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687383736}
   m_CullTransparentMesh: 1
---- !u!114 &1687383740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687383736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a0388392b038747825b70fd9eeee30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 1687383736}
-  cameramanager: {fileID: 231205783}
 --- !u!1 &1694967776
 GameObject:
   m_ObjectHideFlags: 0
@@ -30058,6 +30086,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f70fd8d25c3bf4ea94d37d2e80a446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoomClickedBook: {fileID: 0}
+  pickedurl: 
 --- !u!1 &1835272469
 GameObject:
   m_ObjectHideFlags: 0
@@ -32926,6 +32956,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2059917793}
+  - {fileID: 1656815437}
   m_Father: {fileID: 2124865475}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32964,8 +32995,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1656815437}
+  m_Children: []
   m_Father: {fileID: 2059354221}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -33365,6 +33395,7 @@ GameObject:
   - component: {fileID: 2124865478}
   - component: {fileID: 2124865477}
   - component: {fileID: 2124865476}
+  - component: {fileID: 2124865479}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -33439,7 +33470,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1687383740}
+      - m_Target: {fileID: 2124865479}
         m_TargetAssemblyTypeName: CloseCanvas, Assembly-CSharp
         m_MethodName: ClosePanel
         m_Mode: 1
@@ -33489,6 +33520,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124865474}
   m_CullTransparentMesh: 1
+--- !u!114 &2124865479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124865474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a0388392b038747825b70fd9eeee30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1375305034}
+  cameramanager: {fileID: 231205783}
+  status: {fileID: 231205782}
 --- !u!1 &2126496660
 GameObject:
   m_ObjectHideFlags: 0

@@ -68,9 +68,9 @@ public class ZoomClickedBook : MonoBehaviour
         {
             if (camerastatus.subcam2Stage)
             {
-                closecanvas.ClosePanel();
+                //closecanvas.ClosePanel();
                 
-                camerastatus.MaincamStageF();
+                //camerastatus.MaincamStageF();
                // Debug.Log("CameraStatus.maincamStage:"+camerastatus.maincamStage);
             }
             else if (camerastatus.maincamStage)
@@ -98,7 +98,7 @@ public class ZoomClickedBook : MonoBehaviour
                         Debug.Log("url:" + pickedItem.url);
                         int pickedItemIndex = itemDatabase.itemDatas.IndexOf(pickedItem);
                         showBookImage.SetImage();
-                        Debug.Log(pickedItemIndex);
+                        //Debug.Log(pickedItemIndex);
 
                         ShowPanel();
                         if (cloneObject != null)
