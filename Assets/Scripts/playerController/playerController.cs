@@ -41,9 +41,14 @@ public class PlayerController : MonoBehaviour
     {
         //Debug.DrawRay(shotDirection.position, shotDirection.transform.forward, Color.green);
 
-        /*
+        
         m_movementValue = m_inputMover.ReadValue<Vector2>();
 
+        Vector3 cameraForward = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
+        Vector3 moveForward = cameraForward * m_movementValue.y + Camera.main.transform.right * m_movementValue.x;
+
+
+        /*
         transform.Translate(
             m_movementValue.x * m_fSpeed * Time.deltaTime,
             0.0f,
@@ -53,24 +58,36 @@ public class PlayerController : MonoBehaviour
 
         //transform.position = targetPos;
 
-        float x = Input.GetAxisRaw("Horizontal");
-        float z = Input.GetAxisRaw("Vertical");
-        movingDirecion = new Vector3(x, 0, z);
-        movingDirecion.Normalize();//ŽÎ‚ß‚Ì‹——£‚ª’·‚­‚È‚é‚Ì‚ð–h‚¬‚Ü‚·
-        movingVelocity = movingDirecion * speedMagnification;
+        //float x = Input.GetAxisRaw("Horizontal");
+        //float z = Input.GetAxisRaw("Vertical");
+        //movingDirecion = new Vector3(x, 0, z);
+        //movingDirecion.Normalize();//ŽÎ‚ß‚Ì‹——£‚ª’·‚­‚È‚é‚Ì‚ð–h‚¬‚Ü‚·
+        //movingVelocity = movingDirecion * speedMagnification;
         if (Input.anyKey)
         {
-            movingVelocity = movingDirecion * speedMagnification;
+            movingVelocity = moveForward * speedMagnification;
         }
-        else if (!Input.anyKey)
+        else
         {
             rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            movingVelocity = Vector3.zero;
         }
     }
     void FixedUpdate()
     {
+        if (Input.anyKey)
+        {
+            rb.velocity = new Vector3(movingVelocity.x, rb.velocity.y, movingVelocity.z);
+        }
+        else
+        {
+            movingVelocity = Vector3.zero;
+        }
 
-        rb.velocity = new Vector3(movingVelocity.x, rb.velocity.y, movingVelocity.z);
+        
+       
+
     }
 
     public void StartShopFromInside()

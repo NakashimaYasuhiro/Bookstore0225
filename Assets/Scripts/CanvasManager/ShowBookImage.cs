@@ -8,20 +8,28 @@ public class ShowBookImage : MonoBehaviour
     public Image pickedbookImage;
     public ZoomClickedBook zoomclickedbook;
     [SerializeField] ItemDataBase itemDatabase;
-    Sprite sourceimage;
+    Image sourceimage;
     
     void Start()
     {
-       // sourceimage = GetComponent<Image>().sprite;
-       // ItemData pickedItem = zoomclickedbook.pickedItem;
+       sourceimage = GetComponent<Image>();
+
+       
        // Debug.Log("ShowBookImage:" + pickedItem.name);
-       // sourceimage = pickedItem.sprite;
+      
        // Debug.Log("sourceimage:" + sourceimage);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+       
     }
+
+    public void SetImage()
+    {
+        ItemData pickedItem = zoomclickedbook.pickedItem;
+        sourceimage.sprite = pickedItem.sprite;
+    }
+
 }

@@ -23,6 +23,8 @@ public class ZoomClickedBook : MonoBehaviour
 
     public CloseCanvas closecanvas;
 
+    [SerializeField] ShowBookImage showBookImage;
+
     //List用
     [SerializeField] ItemDataBase itemDatabase;
 
@@ -31,6 +33,8 @@ public class ZoomClickedBook : MonoBehaviour
     //public Sprite sourceimage;
     //public GameObject showBookImage;
     //List用ここまで
+
+
 
 
     void Start()
@@ -90,8 +94,10 @@ public class ZoomClickedBook : MonoBehaviour
                         
                         //動くけどエラーが発生するので直したい
                         pickedItem = itemDatabase.itemDatas.Find(item => item.name == clickedbook.name);
-                        Debug.Log("clickedbookをListの中から探し出した→List上の名前:" + pickedItem.name);
+                        Debug.Log("clickedbookをListの中から探し出した→List上の名前:" + pickedItem.sprite);
+                        Debug.Log("url:" + pickedItem.url);
                         int pickedItemIndex = itemDatabase.itemDatas.IndexOf(pickedItem);
+                        showBookImage.SetImage();
                         Debug.Log(pickedItemIndex);
 
                         ShowPanel();
