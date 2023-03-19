@@ -23,6 +23,8 @@ public class ZoomClickedBook : MonoBehaviour
 
     public CloseCanvas closecanvas;
 
+    [SerializeField] ShowBookImage showBookImage;
+
     //List用
     [SerializeField] ItemDataBase itemDatabase;
 
@@ -31,6 +33,8 @@ public class ZoomClickedBook : MonoBehaviour
     //public Sprite sourceimage;
     //public GameObject showBookImage;
     //List用ここまで
+
+
 
 
     void Start()
@@ -64,9 +68,9 @@ public class ZoomClickedBook : MonoBehaviour
         {
             if (camerastatus.subcam2Stage)
             {
-                closecanvas.ClosePanel();
+                //closecanvas.ClosePanel();
                 
-                camerastatus.MaincamStageF();
+                //camerastatus.MaincamStageF();
                // Debug.Log("CameraStatus.maincamStage:"+camerastatus.maincamStage);
             }
             else if (camerastatus.maincamStage)
@@ -90,9 +94,11 @@ public class ZoomClickedBook : MonoBehaviour
                         
                         //動くけどエラーが発生するので直したい
                         pickedItem = itemDatabase.itemDatas.Find(item => item.name == clickedbook.name);
-                        Debug.Log("clickedbookをListの中から探し出した→List上の名前:" + pickedItem.name);
+                        Debug.Log("clickedbookをListの中から探し出した→List上の名前:" + pickedItem.sprite);
+                        Debug.Log("url:" + pickedItem.url);
                         int pickedItemIndex = itemDatabase.itemDatas.IndexOf(pickedItem);
-                        Debug.Log(pickedItemIndex);
+                        showBookImage.SetImage();
+                        //Debug.Log(pickedItemIndex);
 
                         ShowPanel();
                         if (cloneObject != null)

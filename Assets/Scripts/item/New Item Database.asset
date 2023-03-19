@@ -14,10 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemDatas:
   - name: "\u30A8\u30F3\u30C7\u306E\u907A\u8A00"
-    price: 30
+    url: https://akagerabooks.stores.jp/items/5eb0e8accee9ea3571110ef3
     sprite: {fileID: 21300000, guid: d276180250316cb458d5f5af55252ca5, type: 3}
     text: "\u30A8\u30F3\u30C7\u306E\u907A\u8A00\u306Etext"
   - name: "\u3086\u3063\u304F\u308A\u3001\u3044\u305D\u3052"
-    price: 35
+    url: https://akagerabooks.stores.jp/items/5eb0fd6234ef0122ab044b54
     sprite: {fileID: 21300000, guid: 59c4262a437ad9d43b3a92194b70243f, type: 3}
     text: "\u3086\u3063\u304F\u308A\u3044\u305D\u3052\u306Etext"
+  - name: "\u3042\u3055\u306B\u306A\u3063\u305F\u306E\u3067\u307E\u3069\u3092\u3042\u3051\u307E\u3059\u3088"
+    url: https://akagerabooks.stores.jp/items/5ee47af8d3f16769721b7e7e
+    sprite: {fileID: 21300000, guid: fbd60bc8b8d3b294e8faf2061a2de2e4, type: 3}
+    text: "\u3042\u3055\u306B\u306A\u3063\u305F\u306E\u3067\u307E\u3069\u3092\u3042\u3051\u307E\u3059"

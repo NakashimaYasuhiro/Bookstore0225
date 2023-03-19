@@ -7,6 +7,7 @@ public class CloseCanvas : MonoBehaviour
 {
     [SerializeField] GameObject panel;
     public ZoomClickedBook cameramanager;
+    [SerializeField] CameraStatus status;
         
     
     void Start()
@@ -23,10 +24,14 @@ public class CloseCanvas : MonoBehaviour
     public void ClosePanel()
     {
         Debug.Log("closepanel worked!");
-        Debug.Log("cameramanager.cloneObject:"+cameramanager.cloneObject);   
+        //Debug.Log("cameramanager.cloneObject:"+cameramanager.cloneObject);   
         Destroy(cameramanager.cloneObject);
-        
-        panel.SetActive(false);
+        //panel.SetActive(false);
+        status.MaincamStageF();
+
+       
+
+
 
        
         

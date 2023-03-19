@@ -14,7 +14,7 @@ public class ItemDataBase : ScriptableObject
 public class ItemData
 {
     public string name;
-    public int price;
+    public string url;
     
     public Sprite sprite;
     [TextArea]

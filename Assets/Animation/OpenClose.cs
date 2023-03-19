@@ -8,6 +8,8 @@ public class OpenClose : MonoBehaviour
     GameObject playerObj;
     Transform playerTransform;
 
+    bool isOpen;
+
 
 
     private void Start()
@@ -16,26 +18,40 @@ public class OpenClose : MonoBehaviour
         playerObj = GameObject.Find("Player");
         playerTransform = playerObj.GetComponent<Transform>();
         Debug.Log("playerTransform;"+playerTransform.position);
+
+        isOpen = false;
          
     }
     private void OnTriggerEnter(Collider other)
     {
-        
-        if (other.tag == "Player")
-        {
-            Debug.Log("‚Ô‚Â‚©‚Á‚½‚æ");
-            animator.SetTrigger("OpenTr");
-            
-            Invoke("PlayerToRoom", 3f);
-            
+
+        if (!isOpen) {
+
+            if (other.tag == "Player")
+            {
+                Debug.Log("‚Ô‚Â‚©‚Á‚½‚æ");
+                animator.SetTrigger("OpenTr");
+
+                isOpen = true;
+
+                Invoke("PlayerToRoom", 3f);
+                Invoke("CloseDoor", 3f);
 
 
+            }
         }
+        
+        
         
     }
     void PlayerToRoom()
     {
         playerTransform.position = new Vector3(9.66f, 1.13f, 4.62f);
+    }
+
+    void CloseDoor()
+    {
+        animator.SetTrigger("CloseTr");
     }
     
 }

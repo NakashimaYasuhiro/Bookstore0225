@@ -29,7 +29,7 @@ public class CameraStatus : MonoBehaviour
  
     void Update()
     {
-
+        /*
         if (maincamStage)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -57,7 +57,7 @@ public class CameraStatus : MonoBehaviour
             }
 
         }
-
+        */
 
     }
 
@@ -70,7 +70,7 @@ public class CameraStatus : MonoBehaviour
         maincamStage = true;
         subcam1Stage = false;
         subcam2Stage = false;
-
+        Debug.Log("åªç›maincam true");
     }
 
     public void Subcam1StageF()
@@ -83,6 +83,7 @@ public class CameraStatus : MonoBehaviour
         maincamStage = false;
         subcam1Stage = true;
         subcam2Stage = false;
+        Debug.Log("åªç›subcam1 true");
     }
 
     public void Subcam2StageF()
@@ -94,6 +95,7 @@ public class CameraStatus : MonoBehaviour
         maincamStage = false;
         subcam1Stage = false;
         subcam2Stage = true;
+        Debug.Log("åªç›subcam2 true");
 
     }
 
