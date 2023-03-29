@@ -10,8 +10,6 @@ public class OpenClose : MonoBehaviour
 
     bool isOpen;
 
-
-
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -47,6 +45,7 @@ public class OpenClose : MonoBehaviour
     void PlayerToRoom()
     {
         playerTransform.position = new Vector3(9.66f, 1.13f, 4.62f);
+        playerTransform.rotation = Quaternion.Euler(0,-50, 0);
     }
 
     void CloseDoor()

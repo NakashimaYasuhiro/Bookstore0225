@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     //rigidbody‚É‚æ‚éˆÚ“®
     Vector3 movingDirecion;
-    public float speedMagnification; //’²®•K—v@—á10
+    public float speedMagnification;
     public Rigidbody rb;
     public Vector3 movingVelocity;
  

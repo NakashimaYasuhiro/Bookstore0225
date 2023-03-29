@@ -9,17 +9,7 @@ public class CloseCanvas : MonoBehaviour
     public ZoomClickedBook cameramanager;
     [SerializeField] CameraStatus status;
         
-    
-    void Start()
-    {
-        
-    }
 
-    void Update()
-    {
-       
-
-    }
 
     public void ClosePanel()
     {
